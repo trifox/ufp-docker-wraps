@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+  set -x # trace commands
+echo "EXECUTING node $@"
+
+docker run \
+  -e "NODE_ENV=production" \
+  -u "node" \
+  -m "300M" --memory-swap "1G" \
+  -w "/usr/src/myapp" \
+  -it \
+  --rm \
+  --name "ufp-nodejs-app" \
+  -v $(pwd):/usr/src/myapp\
+  -p "3000:3000" \
+  node:8-slim node $@

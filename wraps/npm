@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+  set -x # trace commands
+docker run \
+  -e "NODE_ENV=production" \
+  -e "PATH=${PATH}:./node_modules/.bin" \
+  -m "300M" --memory-swap "1G" \
+  -w "/usr/src/myapp" \
+  --rm \
+  -it\
+  --name "ufp-yarn-app" \
+  -v $(pwd):/usr/src/myapp\
+  -p "3000:3000" \
+  node:8-slim npm $@

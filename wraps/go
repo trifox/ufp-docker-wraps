@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -x # trace commands
+
+docker run \
+  -m "300M" --memory-swap "1G" \
+  -w "/usr/src/myapp" \
+  --rm \
+  -it\
+  --name "ufp-go-app" \
+  -p "3000:3000" \
+  -v $(pwd):/usr/src/myapp  \
+  golang:1.8 go $@

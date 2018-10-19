@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "TBD"
+set -x # trace commands
+
+docker run \
+  -m "300M" --memory-swap "1G" \
+  -w "/usr/src/myapp" \
+  --rm \
+  -it\
+  --name "ufp-java-app" \
+  -p "3000:3000" \
+  -v $(pwd):/usr/src/myapp  \
+  openjdk:11-jdk-slim java $@
