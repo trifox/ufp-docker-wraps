@@ -11,4 +11,4 @@ docker run \
   --name "ufp-yarn-app" \
   -v $(pwd):/usr/src/myapp\
   -p "3000:3000" \
-  node:8-slim npm $@
+  node:8 npm $@

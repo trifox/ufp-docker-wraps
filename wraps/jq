@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+read input
+
+
+  set -x # trace commands
+echo "STARTING JQ $@"
+  echo "INPUT WAS READ $input"
+docker run \
+  -e "PATH=${PATH}:." \
+  -e "INPUT=${input}" \
+  -m "300M" --memory-swap "1G" \
+  -w "/usr/src/myapp" \
+  --rm \
+  --name "ufp-jq-app" \
+  -v $(pwd):/usr/src/myapp\
+  realguess/jq  sh -c "echo \${INPUT} |jq  $@"

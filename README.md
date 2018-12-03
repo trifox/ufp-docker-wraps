@@ -1,15 +1,28 @@
 # ufp-docker-wraps
 Collection of docker wrapped applications, use all out of the box by mounting this to your ${PATH}
 
-# Quickstart
+# Prerequisites
 
-mount the ./wraps folder to your path, in your bash init skript
+- Docker
+- Bash (Bourne-Again-Shell)
 
-	export PATH=${PATH}:./wraps
-	
-after that, the provided dockerized commands are available, and you can use the commands as in the shell
+# Quickstart 
 
+### Bash
+	git clone https://github.com/trifox/ufp-docker-wraps ~/ufp-docker-wraps 
+	echo "export PATH=${PATH}:~/ufp-docker-wraps/wraps\n">>~/.bashrc 
+	 
+### Zsh 
+	git clone https://github.com/trifox/ufp-docker-wraps ~/ufp-docker-wraps 
+	echo "export PATH=${PATH}:~/ufp-docker-wraps/wraps\n">>~/.zshrc 
+	 
 # Usage
+
+use commandos provided e.g.
+
+	robot
+
+
 
 Each wrap 
 

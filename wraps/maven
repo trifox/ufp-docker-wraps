@@ -3,11 +3,11 @@ echo "TBD"
 set -x # trace commands
 
 docker run \
-  -m "300M" --memory-swap "1G" \
+  -m "1G" --memory-swap "1G" \
   -w "/usr/src/myapp" \
   --rm \
   -it\
   --name "ufp-maven-app" \
   -v "ufp-maven-repo:/root/.m2" \
   -v $(pwd):/usr/src/myapp  \
-  maven:3-jdk-11-slim mvn $@
+  maven:3.6-jdk-8-slim mvn $@

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+  set -x # trace commands
+docker run \
+  -m "300M"\
+  --rm \
+  -it\
+  --name "ufp-robot-app" \
+  -w /opt/robotframework/reports\
+  -e "LOG_LEVEL=v"\
+  -v "$(pwd):/opt/robotframework/tests" \
+  -v "$(pwd)/reports:/opt/robotframework/reports" \
+  ckleinhuis/ufp-robotframework:12 run-tests-in-virtual-screen.sh $@
