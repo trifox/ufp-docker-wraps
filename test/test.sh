@@ -20,7 +20,7 @@ wrapCall()
 
 wrapCall ../wraps/go version
 wrapCall ../wraps/gradle -version
-wrapCall ../wraps/java version
+wrapCall ../wraps/java --version
 wrapCall ../wraps/jq version
 wrapCall ../wraps/maven version
 wrapCall ../wraps/node version
