@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 echo "Testing UFP Docker Wraps"
 
 
@@ -12,7 +11,7 @@ wrapCall()
 	$@
 	RESULT=$?
 	if [ "${RESULT}" -ne 0 ]; then
-		echo "Shit happened"
+		echo "Shit happened ${RESULT}"
 	exit 1
 	fi
 }
@@ -21,13 +20,12 @@ wrapCall()
 wrapCall ../wraps/go version
 wrapCall ../wraps/gradle -version
 wrapCall ../wraps/java --version
-wrapCall ../wraps/jq version
-wrapCall ../wraps/maven version
-wrapCall ../wraps/node version
-wrapCall ../wraps/npm
-wrapCall ../wraps/python
-wrapCall ../wraps/robot
-wrapCall ../wraps/yarn
+wrapCall ../wraps/maven --version
+wrapCall ../wraps/node --version
+wrapCall ../wraps/npm --version
+wrapCall ../wraps/yarn --version
+wrapCall ../wraps/python --version
+wrapCall ../wraps/robot  --version
 
 echo "Test Successful"
 
