@@ -12,4 +12,4 @@ docker run \
   --name "ufp-nodejs-app" \
   -v $(pwd):/usr/src/myapp\
   -p "3000:3000" \
-  node:8-slim node $@
+  node:8 node $@

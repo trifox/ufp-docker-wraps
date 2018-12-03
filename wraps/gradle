@@ -10,4 +10,4 @@ docker run \
   -it\
   --name "ufp-gradle-app" \
   -v $(pwd):/usr/src/myapp  \
-  gradle:jdk8-slim $@
+  gradle:jdk8 gradle $@

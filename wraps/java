@@ -10,4 +10,4 @@ docker run \
   --name "ufp-java-app" \
   -p "3000:3000" \
   -v $(pwd):/usr/src/myapp  \
-  openjdk:11-jdk-slim java $@
+  openjdk:11 java $@

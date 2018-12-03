@@ -10,4 +10,4 @@ docker run \
   --name "ufp-maven-app" \
   -v "ufp-maven-repo:/root/.m2" \
   -v $(pwd):/usr/src/myapp  \
-  maven:3.6-jdk-8-slim mvn $@
+  maven:3.6-jdk-8 mvn $@
