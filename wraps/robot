@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-  set -x # trace commands
+#  set -x # trace commands
 docker run \
   -m "300M"\
   --rm \
@@ -9,4 +9,5 @@ docker run \
   -e "LOG_LEVEL=v"\
   -v "$(pwd):/opt/robotframework/tests" \
   -v "$(pwd)/reports:/opt/robotframework/reports" \
-  ckleinhuis/ufp-robotframework:12 run-tests-in-virtual-screen.sh $@
+  ckleinhuis/ufp-robotframework:12 robot $@  --outputDir=/opt/robotframework/reports
+#  run-tests-in-virtual-screen.sh

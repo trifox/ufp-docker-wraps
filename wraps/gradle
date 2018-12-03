@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-echo "TBD"
 set -x # trace commands
 
 docker run \

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-echo "TBD"
-set -x # trace commands
+#set -x # trace commands
 
 docker run \
   -m "1G" --memory-swap "1G" \

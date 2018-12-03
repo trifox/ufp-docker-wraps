@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-  set -x # trace commands
-echo "EXECUTING node $@"
+#  set -x # trace commands
 
 docker run \
   -e "NODE_ENV=production" \

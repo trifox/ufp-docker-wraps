@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x # trace commands
+#set -x # trace commands
 
 docker run \
   -m "300M" --memory-swap "1G" \

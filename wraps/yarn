@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
+#  set -x # trace commands
 
-  set -x # trace commands
 docker run \
   -e "NODE_ENV=production" \
   -e "PATH=${PATH}:./node_modules/.bin" \

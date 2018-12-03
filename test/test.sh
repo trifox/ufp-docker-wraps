@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 echo "Testing UFP Docker Wraps"
-
-
-
 echo "By Instantiating each"
 
 wrapCall()
